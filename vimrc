@@ -46,7 +46,7 @@ set hlsearch
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
 
-set guifont=Anonymous\ Pro:h13
+set guifont=Anonymous\ Pro:h14
 
 " Store temporary files in a central spot
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp

@@ -35,7 +35,7 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*/.bundle/*
 
 let g:Powerline_symbols = 'fancy'
 
@@ -51,4 +51,3 @@ set guifont=Anonymous\ Pro:h14
 " Store temporary files in a central spot
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-

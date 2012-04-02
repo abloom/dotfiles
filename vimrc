@@ -35,8 +35,9 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*/.bundle/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
 
+let g:ctrlp_custom_ignore = '\.bundle$\'
 let g:Powerline_symbols = 'fancy'
 
 noremap <leader>n :NERDTreeToggle<CR>

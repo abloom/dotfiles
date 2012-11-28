@@ -38,6 +38,7 @@ autocmd BufWinLeave * call clearmatches()
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
 
 let g:Powerline_symbols = 'fancy'
+set laststatus=2 " make sure powerline renders on non-split panes
 
 noremap <leader>n :NERDTreeToggle<CR>
 
@@ -46,7 +47,7 @@ set hlsearch
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
 
-set guifont=Anonymous\ Pro:h14
+set guifont=Source\ Code\ Pro:h14
 
 " Store temporary files in a central spot
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp

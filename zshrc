@@ -29,14 +29,12 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search bundler gem heroku brew osx rails3)
+plugins=(git history-substring-search bundler gem heroku brew osx rails3 rake rbenv ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 export EDITOR=mvim
-export CC="/usr/bin/gcc"
 
+zstyle :omz:plugins:ssh-agent agent-forwarding on
 alias updick='/usr/bin/uptime | perl -ne "/(\d+) d/;print 8,q(=)x\$1,\"D\n\""'

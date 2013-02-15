@@ -16,11 +16,13 @@ endif
 
 autocmd vimenter * if !argc() | NERDTree | endif
 
+"autocmd FileType c,cpp,java,php,js,ruby,coffee,scss,css,haml autocmd BufWritePre <buffer> :%s/\s\+$//e
+
 " Strip trailing whitespace in the current buffer
 nnoremap <leader>w :call StripTrailingWhiteSpace()<CR>
 
 " Strip trailing whitespace upon write
-autocmd BufWritePre  *.{rb,js,coffee,scss,css}  call StripTrailingWhiteSpace()
+autocmd BufWritePre  *.{rb,js,coffee,scss,css,haml}  call StripTrailingWhiteSpace()
 
 function! StripTrailingWhiteSpace()
   let l:winview = winsaveview()
@@ -47,8 +49,10 @@ set hlsearch
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
 
-set guifont=Source\ Code\ Pro:h14
+set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 
 " Store temporary files in a central spot
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+set shell=/bin/zsh

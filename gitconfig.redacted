@@ -21,9 +21,6 @@
   excludesfile = /Users/abloom/.gitignore
   editor = mvim -f
   quotepath = false
-[github]
-  user = # briefcase(github_user)
-  token = # briefcase(github_token)
 [merge]
   tool = opendiff
   summary = true

@@ -56,3 +56,6 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 set shell=/bin/zsh
+
+" CtrlP
+"let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --cached --exclude-standard --others']

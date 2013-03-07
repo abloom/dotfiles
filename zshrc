@@ -17,6 +17,9 @@ ZSH_THEME="muse"
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
+
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
 
@@ -29,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search bundler gem heroku brew osx rails3 rake rbenv ssh-agent)
+plugins=(git history-substring-search bundler gem heroku brew osx rails3 rake ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,4 +40,12 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=mvim
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-alias updick='/usr/bin/uptime | perl -ne "/(\d+) d/;print 8,q(=)x\$1,\"D\n\""'
+
+unsetopt auto_name_dirs
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export RUBY_HEAP_MIN_SLOTS=500000 
+export RUBY_HEAP_SLOTS_INCREMENT=250000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=50000000

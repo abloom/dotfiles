@@ -3,4 +3,5 @@
 --type-add=css=.sass
 --type-add=html=.handlebars
 --type-add=html=.haml
+--type-add=html=.mustache
 --ignore-dir=tmp

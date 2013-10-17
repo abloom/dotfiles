@@ -59,3 +59,6 @@ set shell=/bin/zsh
 
 " CtrlP
 "let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --cached --exclude-standard --others']
+let g:ctrlp_max_files=50000
+
+let g:syntastic_ignore_files=['c']

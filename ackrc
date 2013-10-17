@@ -4,4 +4,5 @@
 --type-add=html=.handlebars
 --type-add=html=.haml
 --type-add=html=.mustache
+--type-set=cucumber=.feature
 --ignore-dir=tmp

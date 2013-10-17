@@ -32,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search bundler gem heroku brew osx rails3 rake ssh-agent)
+plugins=(git history-substring-search gem heroku brew osx rails3 rake ssh-agent bundler npm colored-man screen)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,6 +40,8 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=mvim
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
+
+PATH=$HOME/node_modules/.bin:/usr/local/share/npm/bin:$PATH; # Add NPM
 
 unsetopt auto_name_dirs
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -50,4 +52,8 @@ export RUBY_HEAP_SLOTS_INCREMENT=250000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=50000000
 
-alias kf=ps -A | grep -m1 foreman | grep -v grep | awk '{print $1}' | xargs kill
+alias ll='ls -lah'
+
+ulimit -n 2048
+
+PATH=$PATH:$HOME/bin

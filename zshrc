@@ -32,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search gem heroku brew osx rails3 rake ssh-agent bundler npm colored-man screen)
+plugins=(git history-substring-search gem heroku brew osx rails rake ssh-agent bundler npm colored-man screen)
 
 source $ZSH/oh-my-zsh.sh
 

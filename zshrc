@@ -37,7 +37,7 @@ plugins=(git history-substring-search gem heroku brew osx rails rake ssh-agent b
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export EDITOR=mvim
+export EDITOR="mvim -f"
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
@@ -46,6 +46,9 @@ PATH=$HOME/node_modules/.bin:/usr/local/share/npm/bin:$PATH; # Add NPM
 unsetopt auto_name_dirs
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export NVM_DIR="/Users/abloom/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export RUBY_HEAP_MIN_SLOTS=500000 
 export RUBY_HEAP_SLOTS_INCREMENT=250000

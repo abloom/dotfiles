@@ -57,6 +57,6 @@ export RUBY_GC_MALLOC_LIMIT=50000000
 
 alias ll='ls -lah'
 
-ulimit -n 2048
-
 PATH=$PATH:$HOME/bin
+
+ulimit -n 4096

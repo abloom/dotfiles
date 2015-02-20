@@ -39,8 +39,8 @@ autocmd BufWinLeave * call clearmatches()
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
 
-let g:Powerline_symbols = 'fancy'
 set laststatus=2 " make sure powerline renders on non-split panes
+let g:airline_powerline_fonts = 1
 
 noremap <leader>n :NERDTreeToggle<CR>
 

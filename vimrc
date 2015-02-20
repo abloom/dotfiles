@@ -1,14 +1,25 @@
-" plugins in use
-" ctrlp.vim
-" nerdcommenter
-" nerdtree
-" syntastic
-" vim-airline
-" vim-colors-solarized
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-call pathogen#infect()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'    " required
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 syntax on
-filetype plugin indent on
 set guioptions+=LlRrbm
 set guioptions-=LlRrbm
 set background=dark
@@ -22,9 +33,8 @@ if has("gui_running")
   set guioptions=-t
 endif
 
+" open nerdtree if there was no file specified
 autocmd vimenter * if !argc() | NERDTree | endif
-
-"autocmd FileType c,cpp,java,php,js,ruby,coffee,scss,css,haml autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " Strip trailing whitespace in the current buffer
 nnoremap <leader>w :call StripTrailingWhiteSpace()<CR>
@@ -47,9 +57,6 @@ autocmd BufWinLeave * call clearmatches()
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
 
-set laststatus=2 " make sure powerline renders on non-split panes
-let g:airline_powerline_fonts = 1
-
 noremap <leader>n :NERDTreeToggle<CR>
 
 set incsearch
@@ -66,7 +73,10 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set shell=/bin/zsh
 
 " CtrlP
-"let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --cached --exclude-standard --others']
 let g:ctrlp_max_files=50000
-
+" Syntastic
 let g:syntastic_ignore_files=['c']
+" Airline
+set laststatus=2 " make sure airline renders on non-split panes
+let g:airline_powerline_fonts = 1
+

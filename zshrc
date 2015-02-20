@@ -32,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search gem heroku brew osx rails rake ssh-agent bundler npm colored-man screen)
+plugins=(git history-substring-search gem brew osx rails rake ssh-agent bundler npm colored-man screen docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,3 +60,7 @@ alias ll='ls -lah'
 PATH=$PATH:$HOME/bin
 
 ulimit -n 4096
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/abloom/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1

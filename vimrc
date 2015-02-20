@@ -1,3 +1,11 @@
+" plugins in use
+" ctrlp.vim
+" nerdcommenter
+" nerdtree
+" syntastic
+" vim-airline
+" vim-colors-solarized
+
 call pathogen#infect()
 syntax on
 filetype plugin indent on

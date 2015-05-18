@@ -15,6 +15,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mileszs/ack.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'sirtaj/vim-openscad'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -80,3 +83,5 @@ let g:syntastic_ignore_files=['c']
 set laststatus=2 " make sure airline renders on non-split panes
 let g:airline_powerline_fonts = 1
 
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.git$[[dir]]']

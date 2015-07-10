@@ -32,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search gem brew osx rails rake ssh-agent bundler npm colored-man screen docker vagrant)
+plugins=(git history-substring-search gem brew osx rails rake ssh-agent bundler npm colored-man screen docker vagrant rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,8 +44,8 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 PATH=$HOME/node_modules/.bin:/usr/local/share/npm/bin:$PATH; # Add NPM
 
 unsetopt auto_name_dirs
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export NVM_DIR="/Users/abloom/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -56,6 +56,9 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=50000000
 
 alias ll='ls -lah'
+alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 
 PATH=$PATH:$HOME/bin
 

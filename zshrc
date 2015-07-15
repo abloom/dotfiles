@@ -45,8 +45,6 @@ PATH=$HOME/node_modules/.bin:/usr/local/share/npm/bin:$PATH; # Add NPM
 
 unsetopt auto_name_dirs
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 export NVM_DIR="/Users/abloom/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -59,6 +57,7 @@ alias ll='ls -lah'
 alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
 alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+setjdk18
 
 PATH=$PATH:$HOME/bin
 

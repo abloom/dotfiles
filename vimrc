@@ -19,6 +19,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'sirtaj/vim-openscad'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'ktvoelker/sbt-vim'
+Plugin 'mustache/vim-mustache-handlebars'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

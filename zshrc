@@ -31,8 +31,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search gem brew osx rails rake ssh-agent bundler npm colored-man screen docker vagrant rbenv scala sbt bower ember-cli tmux docker-compose mvn)
+plugins=(git history-substring-search gem brew osx rails rake ssh-agent bundler npm colored-man screen docker vagrant rbenv scala sbt bower ember-cli tmux docker-compose mvn go golang gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,17 +40,13 @@ export EDITOR="mvim -f"
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
-PATH=$HOME/node_modules/.bin:/usr/local/share/npm/bin:$PATH; # Add NPM
+PATH=$HOME/node_modules/.bin:$HOME/bin:/usr/local/share/npm/bin:$PATH; # Add NPM
+PATH=$HOME/code/activator-dist-1.3.10/bin:$PATH;
 
 unsetopt auto_name_dirs
 
 export NVM_DIR="/Users/abloom/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export RUBY_HEAP_MIN_SLOTS=500000 
-export RUBY_HEAP_SLOTS_INCREMENT=250000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=50000000
 
 alias ll='ls -lah'
 alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
@@ -59,27 +54,13 @@ alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
 setjdk18
 
-PATH=$PATH:$HOME/bin
-
 ulimit -n 4096
 
-VM=docker-dev
-docker-machine start $VM > /dev/null
-eval $(docker-machine env $VM)
-
-alias docker-ip='docker-machine ip $VM'
-
-update-host-file() {
-  IP=$(docker-ip)
-  echo $IP
-  echo $VM
-  echo "sudo sed -i .backup \"s/^[^ ]+ $VM$/$IP $VM/\" /etc/hosts"
-  #sudo -E perl -i.backup -pe 's/^[^ ]+\s+$ENV{VM}$/$ENV{IP} $ENV{VM}/' /etc/hosts
-  #sudo -E perl -e 'print $ENV{VM}'
-}
-
+export GOPATH="$HOME/golang"
 alias ta='tmux attach -d -t'
 
-alias dbash() {
-  docker run -ti $1 /bin/bash
-}
+#alias dbash() {
+  #docker run -ti $1 /bin/bash
+#}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

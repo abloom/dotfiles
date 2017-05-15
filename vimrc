@@ -22,6 +22,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'ktvoelker/sbt-vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wavded/vim-stylus'
+Plugin 'vim-scripts/align'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

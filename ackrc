@@ -6,3 +6,5 @@
 --type-add=html=.mustache
 --type-set=cucumber=.feature
 --ignore-dir=tmp
+--ignore-dir=build
+--ignore-dir=temp

@@ -19,10 +19,10 @@ Plugin 'mileszs/ack.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'sirtaj/vim-openscad'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'ktvoelker/sbt-vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wavded/vim-stylus'
 Plugin 'vim-scripts/align'
+Plugin 'rodjek/vim-puppet'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -63,7 +63,7 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*/tmp/*,*/build/*,*/prof/*
 
 noremap <leader>n :NERDTreeToggle<CR>
 
@@ -90,3 +90,5 @@ let g:airline_powerline_fonts = 1
 
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.git$[[dir]]']
+autocmd! GUIEnter * set vb t_vb=
+autocmd BufNewFile,BufRead *.pp   set filetype=puppet

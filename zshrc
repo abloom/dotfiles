@@ -36,30 +36,30 @@ plugins=(git history-substring-search gem brew osx rails rake ssh-agent bundler 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export EDITOR="mvim -f"
+export EDITOR="nvim"
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
-PATH=$HOME/node_modules/.bin:$HOME/bin:/usr/local/share/npm/bin:$PATH; # Add NPM
-PATH=$HOME/code/activator-dist-1.3.10/bin:$PATH;
+#PATH=$HOME/node_modules/.bin:$HOME/bin:/usr/local/share/npm/bin:$PATH; # Add NPM
+#PATH=$HOME/code/activator-dist-1.3.10/bin:$PATH;
 
 unsetopt auto_name_dirs
 
-export NVM_DIR="/Users/abloom/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="/Users/abloom/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias ll='ls -lah'
-alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
-alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
-alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
-setjdk18
+#alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+#alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+#alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+#setjdk18
 
 ulimit -n 4096
 
-export GOPATH="$HOME/golang"
+#export GOPATH="$HOME/golang"
 alias ta='tmux attach -d -t'
 
-alias ops-config-docker='docker run --rm -t -i -v $HOME/code/ops-config:/ops-config everydayhero/ruby-ree /bin/bash'
+#alias ops-config-docker='docker run --rm -t -i -v $HOME/code/ops-config:/ops-config everydayhero/ruby-ree /bin/bash'
 #alias dbash() {
   #docker run -ti $1 /bin/bash
 #}

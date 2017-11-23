@@ -65,3 +65,4 @@ alias ta='tmux attach -d -t'
 #}
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.zsh_profile" && source "${HOME}/.zsh_profile"

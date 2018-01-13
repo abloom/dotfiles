@@ -60,5 +60,4 @@ ulimit -n 4096
 alias ta='tmux attach -d -t'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-eval "$(rbenv init -)"
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+test -e "${HOME}/.zsh_profile" && source "${HOME}/.zsh_profile"

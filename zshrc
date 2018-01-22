@@ -31,7 +31,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git history-substring-search gem brew osx rails rake ssh-agent bundler npm colored-man screen docker vagrant rbenv scala sbt bower ember-cli docker-compose mvn go golang gpg-agent)
+plugins=(git history-substring-search gem brew osx rails rake ssh-agent bundler npm colored-man screen docker vagrant rbenv scala sbt bower ember-cli docker-compose mvn go golang gpg-agent tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,7 +57,7 @@ alias ll='ls -lah'
 ulimit -n 4096
 
 #export GOPATH="$HOME/golang"
-alias ta='tmux attach -d -t'
+#alias ta='tmux attach -d -t'
 
 #alias ops-config-docker='docker run --rm -t -i -v $HOME/code/ops-config:/ops-config everydayhero/ruby-ree /bin/bash'
 #alias dbash() {

@@ -16,13 +16,19 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mileszs/ack.vim'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'sirtaj/vim-openscad'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'wavded/vim-stylus'
 Plugin 'vim-scripts/align'
 Plugin 'rodjek/vim-puppet'
+Plugin 'fatih/vim-go'
+
+if has('nvim')
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+endif
+Plugin 'zchee/deoplete-go', { 'do': 'make'}
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -35,7 +41,8 @@ colorscheme solarized
 set wrap
 set number
 set expandtab
-set softtabstop=2 shiftwidth=2 expandtab
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd Filetype go setlocal noexpandtab
 
 if has("gui_running")
   set guioptions=-t
@@ -80,8 +87,13 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 set shell=/bin/zsh
 
+" deoplete
+let g:python3_host_prog = "/usr/local/bin/python3"
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#go#gocode_binary = '~/go/bin/gocode'
 " CtrlP
 let g:ctrlp_max_files=50000
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 " Syntastic
 let g:syntastic_ignore_files=['c']
 " Airline

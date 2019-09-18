@@ -56,8 +56,7 @@ alias ll='ls -lah'
 
 ulimit -n 4096
 
-#export GOPATH="$HOME/golang"
-alias ta='tmux attach -d -t'
+#alias ta='tmux attach -d -t'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -e "${HOME}/.zsh_profile" && source "${HOME}/.zsh_profile"

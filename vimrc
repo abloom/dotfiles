@@ -20,15 +20,18 @@ Plugin 'sirtaj/vim-openscad'
 Plugin 'vim-scripts/align'
 Plugin 'rodjek/vim-puppet'
 Plugin 'fatih/vim-go'
+Plugin 'google/vim-maktaba'
+Plugin 'bazelbuild/vim-bazel'
+Plugin 'cappyzawa/starlark.vim'
 
-if has('nvim')
-  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plugin 'Shougo/deoplete.nvim'
-  Plugin 'roxma/nvim-yarp'
-  Plugin 'roxma/vim-hug-neovim-rpc'
-endif
-Plugin 'zchee/deoplete-go', { 'do': 'make'}
+"if has('nvim')
+  "Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+  "Plugin 'Shougo/deoplete.nvim'
+  "Plugin 'roxma/nvim-yarp'
+  "Plugin 'roxma/vim-hug-neovim-rpc'
+"endif
+"Plugin 'zchee/deoplete-go', { 'do': 'make'}
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -103,4 +106,8 @@ let g:airline_powerline_fonts = 1
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.git$[[dir]]']
 autocmd! GUIEnter * set vb t_vb=
-autocmd BufNewFile,BufRead *.pp   set filetype=puppet
+autocmd BufNewFile,BufRead *.pp set filetype=puppet
+autocmd BufNewFile,BufRead *.sky set filetype=starlark
+autocmd BufRead,BufNewFile *.bzl,BUILD,*.BUILD,BUILD.*,WORKSPACE setfiletype bzl
+
+set mouse=a

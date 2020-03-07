@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME=""
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -31,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git history-substring-search gem brew osx rake ssh-agent bundler npm colored-man screen docker vagrant scala sbt bower docker-compose mvn go golang gpg-agent tmux rbenv)
+plugins=(git history-substring-search gem brew osx rake ssh-agent bundler npm colored-man-pages screen docker vagrant scala sbt bower docker-compose mvn gpg-agent tmux rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,7 +57,8 @@ alias ll='ls -lah'
 
 ulimit -n 4096
 
-#alias ta='tmux attach -d -t'
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -e "${HOME}/.zsh_profile" && source "${HOME}/.zsh_profile"
+
+autoload -U promptinit; promptinit
+prompt pure

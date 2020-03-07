@@ -4,6 +4,7 @@
 --type-add=html=.handlebars
 --type-add=html=.haml
 --type-add=html=.mustache
+--type-add=py=.sky
 --type-set=cucumber=.feature
 --ignore-dir=tmp
 --ignore-dir=build

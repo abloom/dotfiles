@@ -46,8 +46,8 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 unsetopt auto_name_dirs
 
-#export NVM_DIR="/Users/abloom/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias ll='ls -lah'
 #alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'

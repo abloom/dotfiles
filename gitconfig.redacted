@@ -21,6 +21,8 @@
   excludesfile = /Users/abloom/.gitignore
   editor = mvim -f
   quotepath = false
+  # http://stackoverflow.com/questions/18257622/why-is-git-core-preloadindex-default-value-false
+  preloadindex = true
 [merge]
   tool = opendiff
   summary = true
@@ -33,3 +35,8 @@
   browse = yes
 [push]
   default = simple
+[help]
+  # Automatically correct and execute mistyped commands such as `git stauts`
+  autocorrect = 1
+[pull]
+	ff = only

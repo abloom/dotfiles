@@ -23,6 +23,7 @@ Plugin 'fatih/vim-go'
 Plugin 'google/vim-maktaba'
 Plugin 'bazelbuild/vim-bazel'
 Plugin 'cappyzawa/starlark.vim'
+Plugin 'prettier/vim-prettier'
 
 "if has('nvim')
   "Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -102,6 +103,9 @@ let g:syntastic_ignore_files=['c']
 " Airline
 set laststatus=2 " make sure airline renders on non-split panes
 let g:airline_powerline_fonts = 1
+let g:airline_section_a = ''
+let g:airline_section_b = ''
+let g:airline_skip_empty_sections = 1
 
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.git$[[dir]]']
@@ -111,3 +115,5 @@ autocmd BufNewFile,BufRead *.sky set filetype=starlark
 autocmd BufRead,BufNewFile *.bzl,BUILD,*.BUILD,BUILD.*,WORKSPACE setfiletype bzl
 
 set mouse=a
+let g:go_fmt_command = "goimports"
+set clipboard=unnamed

@@ -32,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git history-substring-search gem brew osx rake ssh-agent bundler npm colored-man-pages screen docker vagrant scala sbt bower docker-compose mvn gpg-agent tmux rbenv)
+plugins=(git history-substring-search gem brew osx rake ssh-agent bundler npm colored-man-pages screen docker vagrant scala sbt bower docker-compose mvn gpg-agent tmux rbenv nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -46,8 +46,9 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 unsetopt auto_name_dirs
 
-#export NVM_DIR="/Users/abloom/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias ll='ls -lah'
 #alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'

@@ -1,6 +1,1 @@
-registry=http://npm-registry.snc1/
-//npm-registry.snc1/:_password=# briefcase(password)
-//npm-registry.snc1/:username=# briefcase(username)
-//npm-registry.snc1/:email=# briefcase(email)
-//npm-registry.snc1/:always-auth=false
 progress=false

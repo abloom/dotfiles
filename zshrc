@@ -32,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git history-substring-search gem brew osx rake ssh-agent bundler npm colored-man-pages screen docker vagrant scala sbt bower docker-compose mvn go golang gpg-agent tmux rbenv)
+plugins=(git history-substring-search gem brew osx rake ssh-agent bundler npm colored-man-pages screen docker vagrant scala sbt bower docker-compose mvn golang gpg-agent tmux rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,6 +60,7 @@ ulimit -n 4096
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 test -e "${HOME}/.zsh_profile" && source "${HOME}/.zsh_profile"
+test -e "${HOME}/.bash_profile" && source "${HOME}/.bash_profile"
 
 autoload -U promptinit; promptinit
 prompt pure

@@ -41,20 +41,9 @@ export EDITOR="nvim"
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
-#PATH=$HOME/node_modules/.bin:$HOME/bin:/usr/local/share/npm/bin:$PATH; # Add NPM
-#PATH=$HOME/code/activator-dist-1.3.10/bin:$PATH;
-
 unsetopt auto_name_dirs
 
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 alias ll='ls -lah'
-#alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
-#alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
-#alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
-#setjdk18
 
 ulimit -n 4096
 

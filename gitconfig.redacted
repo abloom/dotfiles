@@ -19,7 +19,7 @@
   gist = !git diff | gist -p -t diff -o
 [core]
   excludesfile = /Users/abloom/.gitignore
-  editor = mvim -f
+  editor = nvim -f
   quotepath = false
   # http://stackoverflow.com/questions/18257622/why-is-git-core-preloadindex-default-value-false
   preloadindex = true

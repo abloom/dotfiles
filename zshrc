@@ -51,5 +51,7 @@ alias ll='ls -lah'
 
 ulimit -n 4096
 
+# https://github.com/sindresorhus/pure
+fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure

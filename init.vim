@@ -1,1 +1,1 @@
-/Users/andrewbloom/.vimrc
+vimrc

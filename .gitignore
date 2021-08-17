@@ -2,3 +2,4 @@ gitconfig
 npmrc
 GHE_TOKEN
 ghe-token
+.DS_Store

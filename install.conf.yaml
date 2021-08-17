@@ -1,0 +1,28 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.ackrc: ackrc
+    ~/.config/nvim/init.vim: init.vim
+    ~/.gemrc: gemrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.irbrc: irbrc
+    ~/.npmrc: npmrc
+    ~/.rc: rc
+    ~/.screenrc: screenrc
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+
+- create:
+    - ~/.vim/undo-history
+    - ~/.config/nvim/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p "$HOME/.zsh"]
+  - [git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure", Cloning pure prompt]

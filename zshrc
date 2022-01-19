@@ -32,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(gitfast history-substring-search gem osx rake ssh-agent bundler npm colored-man-pages docker golang gpg-agent tmux)
+plugins=(gitfast history-substring-search gem macos rake ssh-agent bundler npm colored-man-pages docker golang gpg-agent tmux virtualenv-autodetect)
 
 source $ZSH/oh-my-zsh.sh
 

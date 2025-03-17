@@ -32,18 +32,17 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(gitfast history-substring-search gem macos rake ssh-agent bundler npm colored-man-pages docker golang gpg-agent tmux virtualenv-autodetect)
+plugins=(gitfast history-substring-search gem rake ssh-agent bundler npm colored-man-pages docker golang gpg-agent tmux virtualenv-autodetect terraform pyenv composer)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-test -e "${HOME}/.zsh_profile" && source "${HOME}/.zsh_profile"
-test -e "${HOME}/.bash_profile" && source "${HOME}/.bash_profile"
 
 export EDITOR="nvim"
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
+#zstyle :omz:plugins:ssh-agent identities id_ed25519
 
 unsetopt auto_name_dirs
 
@@ -55,3 +54,7 @@ ulimit -n 4096
 fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/andrew/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

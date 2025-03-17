@@ -40,3 +40,9 @@
   autocorrect = 1
 [pull]
 	ff = only
+[pager]
+  branch = false
+[init]
+	defaultBranch = main
+[url "git@github.com:"]
+	insteadOf = https://github.com/
